@@ -1,0 +1,40 @@
+.logo {
+    width: 200px;
+    height: 55px;
+}
+
+.example-spacer {
+    display: flex;
+    align-items: end;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.right-icons {
+    display: flex;
+    align-items: center;
+}
+
+.right-icons h4 {
+    padding-left: 20px;
+    padding-right: 200px;
+    color: white;
+}
+
+.login-icon {
+    margin-right: 40px;
+    color: white;
+}
+
+.home-icon {
+    color: white;
+}
+
+mat-toolbar {
+    background-color: black;
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+}

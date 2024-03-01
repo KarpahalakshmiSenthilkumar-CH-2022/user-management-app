@@ -1,0 +1,51 @@
+mat-sidenav-container {
+    height: 100vh;
+    position: relative;
+}
+
+mat-sidenav {
+    padding-top: 3.5rem;
+    position: fixed;
+
+    @media screen and (min-width: 600px) {
+        padding-top: 7rem;
+    }
+
+    .entry {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.75rem;
+    }
+}
+
+mat-sidenav-content {
+    padding-top: 3.5rem;
+    padding-left: 2rem;
+    position: relative;
+    top: 60px;
+    overflow-y: auto;
+    height: calc(100vh - 60px);
+
+    @media screen and (min-width: 600px) {
+        padding-top: 4rem;
+    }
+}
+
+.button {
+    position: fixed;
+    top: 50%;
+    margin-left: -52px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    padding: 8px;
+}
+
+.toggle-button {
+    position: fixed;
+    margin-left: 180px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    padding: 8px;
+    top: 50%;
+}

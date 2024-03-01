@@ -1,0 +1,36 @@
+<h1>User Directory</h1>
+<mat-table #table [dataSource]="EmpData">
+
+    <ng-container matColumnDef="Id">
+        <mat-header-cell *matHeaderCellDef> Id </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.Id}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="FirstName">
+        <mat-header-cell *matHeaderCellDef> FirstName </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.FirstName}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="LastName">
+        <mat-header-cell *matHeaderCellDef> LastName </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.LastName}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Email">
+        <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.Email}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Gender">
+        <mat-header-cell *matHeaderCellDef> Gender </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.Gender}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="JobTitle">
+        <mat-header-cell *matHeaderCellDef> Job Title </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.JobTitle}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>

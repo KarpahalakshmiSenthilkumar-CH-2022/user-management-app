@@ -1,0 +1,33 @@
+<mat-sidenav-container autosize>
+    <mat-sidenav mode="side" [opened]="isCollapsed">
+        <mat-nav-list>
+            <a mat-list-item>
+                <span class="entry" [routerLink]="['/home']">
+                    <mat-icon>house</mat-icon>
+                    <span>Home</span>
+                </span>
+            </a>
+            <a mat-list-item>
+                <span class="entry" [routerLink]="['/user']">
+                    <mat-icon>person</mat-icon>
+                    <span>User Management</span>
+                </span>
+            </a>
+            <a mat-list-item>
+                <span class="entry" [routerLink]="['/role']">
+                    <mat-icon>work</mat-icon>
+                    <span>Role Management</span>
+                </span>
+            </a>
+        </mat-nav-list>
+        <button mat-icon-button (click)="toggleMenu()" *ngIf="isCollapsed" class="toggle-button">
+            <mat-icon>{{ !isCollapsed ? 'east' : 'west' }}</mat-icon>
+        </button>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <button mat-icon-button (click)="toggleMenu()" *ngIf="!isCollapsed" class="button">
+            <mat-icon>{{ !isCollapsed ? 'east' : 'west' }}</mat-icon>
+        </button>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
